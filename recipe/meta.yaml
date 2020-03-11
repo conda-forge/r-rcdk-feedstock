@@ -30,7 +30,7 @@ requirements:
     - r-itertools
     - r-png
     - r-rjava
-    - r-rcdklibs >=1.5.12
+    - r-rcdklibs >=2.3
   run:
     - r-base
     - r-fingerprint
@@ -38,7 +38,7 @@ requirements:
     - r-itertools
     - r-png
     - r-rjava
-    - r-rcdklibs >=1.5.12
+    - r-rcdklibs >=2.3
 
 test:
   commands:
