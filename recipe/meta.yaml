@@ -1,4 +1,4 @@
-{% set version = "3.4.7.2" %}
+{% set version = "3.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rcdk_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rcdk/rcdk_{{ version }}.tar.gz
-  sha256: 06fb561d08c09e4e90681f7b06ef69b7f76682ed88fb157461e7d02f1fdacb3a
+  sha256: de0131235cae1a300ade1ff7940fe2d66d9e915712444253d32832b7ed157f15
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -30,7 +30,7 @@ requirements:
     - r-itertools
     - r-png
     - r-rjava
-    - r-rcdklibs >=1.5.12
+    - r-rcdklibs >=2.3
   run:
     - r-base
     - r-fingerprint
@@ -48,12 +48,10 @@ test:
 about:
   home: https://CRAN.R-project.org/package=rcdk
   license: LGPL
-  summary: Allows the user to access functionality in the 'CDK', a Java framework for chemoinformatics.
-    This allows the user to load molecules, evaluate fingerprints, calculate molecular
-    descriptors and so on. In addition, the 'CDK' API allows the user to view structures
-    in 2D.
+  summary: Allows the user to access functionality in the 'CDK', a Java framework for chemoinformatics. This allows the user to load molecules, evaluate fingerprints,
+    calculate molecular descriptors and so on. In addition, the 'CDK' API allows the user to view structures in 2D.
   license_family: LGPL
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3
 
 extra:
   recipe-maintainers:
