@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-fingerprint
@@ -30,7 +31,7 @@ requirements:
     - r-itertools
     - r-png
     - r-rjava
-    - r-rcdklibs >=1.5.12
+    - r-rcdklibs >=2.8
   run:
     - r-base
     - r-fingerprint
@@ -38,7 +39,7 @@ requirements:
     - r-itertools
     - r-png
     - r-rjava
-    - r-rcdklibs >=1.5.12
+    - r-rcdklibs >=2.8
 
 test:
   commands:
@@ -47,11 +48,11 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=rcdk
-  license: LGPL
-  
+  license: LGPL-2.0-or-later
   summary: Allows the user to access functionality in the 'CDK', a Java framework for chemoinformatics. This allows the user to load molecules, evaluate fingerprints, calculate molecular descriptors and so on. In addition, the 'CDK' API allows the user to view structures in 2D.
   license_family: LGPL
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3
 
 extra:
   recipe-maintainers:
