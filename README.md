@@ -3,7 +3,7 @@ About r-rcdk
 
 Home: https://CRAN.R-project.org/package=rcdk
 
-Package license: LGPL
+Package license: LGPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rcdk-feedstock/blob/main/LICENSE.txt)
 
