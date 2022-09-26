@@ -48,6 +48,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=rcdk
   license: LGPL
+  
   summary: Allows the user to access functionality in the 'CDK', a Java framework for chemoinformatics. This allows the user to load molecules, evaluate fingerprints, calculate molecular descriptors and so on. In addition, the 'CDK' API allows the user to view structures in 2D.
   license_family: LGPL
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3
