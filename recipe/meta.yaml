@@ -1,4 +1,4 @@
-{% set version = "3.7.0" %}
+{% set version = "3.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rcdk_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rcdk/rcdk_{{ version }}.tar.gz
-  sha256: 28bc63cad0e22c9c725bea00e9af573e4bc634590ec2672a941ce85e8c761d1c
+  sha256: 166ac3c8bc67d68965f33e470eed2fa32831997ad432f1e36038b581f56daef7
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
