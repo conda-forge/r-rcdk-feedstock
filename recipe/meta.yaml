@@ -1,4 +1,4 @@
-{% set version = "3.8.1" %}
+{% set version = "3.8.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rcdk_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rcdk/rcdk_{{ version }}.tar.gz
-  sha256: 2726b934dedbb61ca0cfd94b086bc47fbbc29f4042e867ca64b37dc06d96bc95
+  sha256: 6fe80388eb219fa490ea1ff1cd0681ab554ec95de79cfb250056834f3a643bb1
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
